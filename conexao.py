@@ -1,7 +1,13 @@
 import mysql.connector
 import openpyxl
 
-con = mysql.connector.connect(host='localhost',database = 'world',user='root',password='leojunior2020')
+#DADOS PARA A CONEXAO
+fonte='localhost'
+banco='world'
+usuario='root'
+senha='leojunior2020'
+
+con = mysql.connector.connect(host=fonte,database = banco,user=usuario,password=senha)
 
 consulta="select * from city"
 
@@ -23,7 +29,7 @@ for linha in linhas:
     city_page.append(linha)
 
 #criacao do ficheiro
-book.save('cidades1.xlsx')
+book.save('cidades2.xlsx')
 
 if con.is_connected():
     cursor.close()
