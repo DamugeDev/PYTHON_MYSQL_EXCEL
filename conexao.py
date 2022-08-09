@@ -5,7 +5,7 @@ import openpyxl
 fonte='localhost'
 banco='world'
 usuario='root'
-senha='leojunior2020'
+senha='mypass'
 
 con = mysql.connector.connect(host=fonte,database = banco,user=usuario,password=senha)
 
